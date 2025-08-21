@@ -4,12 +4,15 @@
   background-position: center;
   height: 208px;
   color: #fff;
+  padding-left: 42px;
+  padding-right: 42px;
   position: relative;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 42px;
-  padding-right: 42px;
 }
 
 .header__title {
