@@ -1,0 +1,30 @@
+.header {
+  background-image: url("../../assets/header-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 208px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.header__title {
+  font-weight: 800;
+  font-size: 42.79px;
+}
+
+.header__link {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
+}
+
+.header__link:hover {
+  color: #ccc;
+}
