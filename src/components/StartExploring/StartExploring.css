@@ -1,0 +1,13 @@
+.start-exploring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #dfdddd;
+  text-align: center;
+}
+
+.start-exploring__title {
+  font-size: 24px;
+  font-weight: 700;
+}
