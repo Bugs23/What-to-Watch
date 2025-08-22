@@ -147,3 +147,7 @@ body {
   margin: 0 auto;
   height: 100%;
 }
+
+.movie-list {
+  margin: 0 42px;
+}
