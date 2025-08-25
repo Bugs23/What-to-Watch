@@ -2,8 +2,9 @@ import { useState } from "react";
 import { getMovies } from "../utils/omdbApi";
 
 import SearchBar from "../components/SearchBar/SearchBar";
-import StartExploring from "../components/StartExploring/StartExploring";
 import MovieCard from "../components/MovieCard/MovieCard";
+import EmptyPage from "../components/EmptyPage/EmptyPage";
+import { TbMovie } from "react-icons/tb";
 
 export default function SearchPage() {
   const [movies, setMovies] = useState([]);
@@ -36,7 +37,10 @@ export default function SearchPage() {
       ) : error ? (
         <p className="error">{error}</p>
       ) : (
-        <StartExploring />
+        <EmptyPage>
+          <TbMovie size={"120px"} />
+          <h2 className="empty-page__message">Start Exploring</h2>
+        </EmptyPage>
       )}
     </>
   );

@@ -1,0 +1,29 @@
+.empty-page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #dfdddd;
+  text-align: center;
+}
+
+.empty-page__message {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.empty-page__sub-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #363636;
+  margin-top: 16px;
+}
+
+.empty-page__sub-message__message {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
