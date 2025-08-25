@@ -151,3 +151,10 @@ body {
 .movie-list {
   margin: 0 42px;
 }
+
+.error {
+  font-size: 24px;
+  font-weight: 700;
+  color: #374151;
+  text-align: center;
+}

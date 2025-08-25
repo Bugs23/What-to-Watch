@@ -10,12 +10,19 @@
   margin-bottom: 65px;
 }
 
-.header__title {
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav__title {
   font-weight: 800;
   font-size: 42.79px;
 }
 
-.header__link {
+.header__nav__link {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -23,6 +30,6 @@
   transition: ease-in-out 0.2s;
 }
 
-.header__link:hover {
+.header__nav__link:hover {
   color: #ccc;
 }
