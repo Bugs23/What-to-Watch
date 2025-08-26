@@ -1,8 +1,19 @@
 import "./MovieCard.css";
+import { addToWatchlist, getWatchlist } from "../../utils/addToWatchlist";
 import { FaStar } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 export default function MovieCard({ movie }) {
+  const currentWatchlist = getWatchlist();
+
+  const alreadyOnWatchlist = currentWatchlist.some((currentMovie) => {
+    return currentMovie.imdbRating === movie.imdbRating;
+  });
+
+  function handleAddToWatchlist() {
+    addToWatchlist(movie);
+  }
+
   return (
     <div className="container">
       <article className="movie-card">
@@ -30,9 +41,14 @@ export default function MovieCard({ movie }) {
           <div className="movie-card__meta">
             <span className="movie-card__duration">{movie.Runtime}</span>
             <span className="movie-card__genre">{movie.Genre}</span>
-            <button className="movie-card__watchlist">
-              <FaPlus className="movie-card__watchlist-icon" /> Watchlist
-            </button>
+            {!alreadyOnWatchlist && (
+              <button
+                className="movie-card__watchlist"
+                onClick={handleAddToWatchlist}
+              >
+                <FaPlus className="movie-card__watchlist-icon" /> Watchlist
+              </button>
+            )}
           </div>
 
           {/* Description */}
