@@ -1,18 +1,14 @@
 import "./MovieCard.css";
-import { addToWatchlist, getWatchlist } from "../../utils/addToWatchlist";
-import { FaStar } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
+// import { addToWatchlist, getWatchlist } from "../../utils/addToWatchlist";
+import { FaStar, FaPlus, FaMinus } from "react-icons/fa";
 
-export default function MovieCard({ movie }) {
-  const currentWatchlist = getWatchlist();
-
-  const alreadyOnWatchlist = currentWatchlist.some((currentMovie) => {
-    return currentMovie.imdbRating === movie.imdbRating;
-  });
-
-  function handleAddToWatchlist() {
-    addToWatchlist(movie);
-  }
+export default function MovieCard({
+  movie,
+  addToWatchlist,
+  watchlist,
+  isInWatchlist,
+}) {
+  const currentWatchlist = watchlist;
 
   return (
     <div className="container">
@@ -39,14 +35,24 @@ export default function MovieCard({ movie }) {
 
           {/* Meta Info */}
           <div className="movie-card__meta">
+            <span className="movie-card__year">
+              <strong>{movie.Year}</strong>
+            </span>
             <span className="movie-card__duration">{movie.Runtime}</span>
             <span className="movie-card__genre">{movie.Genre}</span>
-            {!alreadyOnWatchlist && (
+            {!isInWatchlist ? (
               <button
                 className="movie-card__watchlist"
-                onClick={handleAddToWatchlist}
+                onClick={() => addToWatchlist(movie)}
               >
                 <FaPlus className="movie-card__watchlist-icon" /> Watchlist
+              </button>
+            ) : (
+              <button
+                className="movie-card__watchlist"
+                onClick={() => addToWatchlist(movie)}
+              >
+                <FaMinus className="movie-card__watchlist-icon" /> Remove
               </button>
             )}
           </div>

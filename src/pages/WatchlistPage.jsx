@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
-import { getWatchlist } from "../utils/addToWatchlist";
+// import { getWatchlist } from "../utils/addToWatchlist";
 
 import EmptyPage from "../components/EmptyPage/EmptyPage";
 import MovieCard from "../components/MovieCard/MovieCard";
 
 import { IoAddCircle } from "react-icons/io5";
 
-export default function WatchlistPage() {
-  const currentWatchlist = getWatchlist();
+export default function WatchlistPage({ watchlist }) {
+  const currentWatchlist = watchlist;
 
   const movieCardElements = currentWatchlist.map((movie) => (
-    <MovieCard key={movie.imdbID} movie={movie} />
+    <MovieCard
+      key={movie.imdbID}
+      movie={movie}
+      watchlist={watchlist}
+      isInWatchlist={true}
+    />
   ));
 
   return (
