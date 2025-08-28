@@ -15,6 +15,7 @@
   width: 150px;
   border-radius: 2.33px;
   object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
 }
 
 .movie-card__content {
@@ -50,13 +51,19 @@
   color: #fec654;
 }
 
-.movie-card__meta {
+.movie-card__info {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
   font-size: 12px;
   color: #111827;
+}
+
+.movie-card__info__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .movie-card__watchlist {
@@ -83,4 +90,28 @@
   color: #6b7280; /* gray-500 */
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (max-width: 767px) {
+  .movie-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .movie-card__poster {
+    width: 250px;
+    height: auto;
+  }
+
+  .movie-card__header {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .movie-card__info {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
 }

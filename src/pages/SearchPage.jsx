@@ -6,7 +6,11 @@ import MovieCard from "../components/MovieCard/MovieCard";
 import EmptyPage from "../components/EmptyPage/EmptyPage";
 import { TbMovie } from "react-icons/tb";
 
-export default function SearchPage({ watchlist, addToWatchlist }) {
+export default function SearchPage({
+  watchlist,
+  addToWatchlist,
+  removeFromWatchlist,
+}) {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState("");
 
@@ -29,6 +33,7 @@ export default function SearchPage({ watchlist, addToWatchlist }) {
       key={movie.imdbID}
       movie={movie}
       addToWatchlist={addToWatchlist}
+      removeFromWatchlist={removeFromWatchlist}
       watchlist={watchlist}
       // Check if the movie is already in the watchlist and set prop to true or false
       isInWatchlist={watchlist.some(

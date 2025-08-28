@@ -6,7 +6,7 @@ import MovieCard from "../components/MovieCard/MovieCard";
 
 import { IoAddCircle } from "react-icons/io5";
 
-export default function WatchlistPage({ watchlist }) {
+export default function WatchlistPage({ watchlist, removeFromWatchlist }) {
   const currentWatchlist = watchlist;
 
   const movieCardElements = currentWatchlist.map((movie) => (
@@ -15,6 +15,7 @@ export default function WatchlistPage({ watchlist }) {
       movie={movie}
       watchlist={watchlist}
       isInWatchlist={true}
+      removeFromWatchlist={removeFromWatchlist}
     />
   ));
 

@@ -1,5 +1,5 @@
 .header {
-  background-image: url("../../assets/header-hero.jpg");
+  background-image: url("../images/header-hero.jpg");
   background-size: cover;
   background-position: center;
   height: 208px;
@@ -19,11 +19,26 @@
 
 .header__nav__title {
   font-weight: 800;
-  font-size: 42.79px;
 }
 
 .header__nav__link {
   color: #fff;
-  font-size: 20px;
   font-weight: 700;
+}
+
+.active-link {
+  font-size: 42.79px;
+  opacity: 1;
+}
+
+.inactive-link {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .header__nav {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
