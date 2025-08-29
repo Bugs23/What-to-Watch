@@ -3,6 +3,7 @@ import "./style.css";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
+// Components and Pages
 import Header from "./components/Header/Header";
 import SearchPage from "./pages/SearchPage";
 import WatchlistPage from "./pages/WatchlistPage";
