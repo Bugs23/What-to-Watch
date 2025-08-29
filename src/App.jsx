@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import SearchPage from "./pages/SearchPage";
-import WatchlistPage from "./pages/WatchListPage";
+import WatchlistPage from "./pages/WatchlistPage";
 
 export default function App() {
   // State to manage the watchlist, initialized from localStorage if available
